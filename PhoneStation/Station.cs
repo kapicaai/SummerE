@@ -19,7 +19,8 @@ namespace PhoneStation
             if (emptyPorts.Count() > 0)
             {
                 IPort port = emptyPorts.First();
-
+                (terminal as Terminal).terminalBecomeBusy += (port as Port).OnTerminalBecomeBusy;
+                (terminal as Terminal).terminalBecomeFree += (port as Port).OnTerminalBecomeFree;
             }
         }
     }

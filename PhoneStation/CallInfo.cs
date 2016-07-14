@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneStation
 {
-    class CallInfo
+    public class CallInfo
     {
         public Port From { get; }
         public Port To { get; }

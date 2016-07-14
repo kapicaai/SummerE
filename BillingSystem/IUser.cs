@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PhoneStation
+namespace BillingSystem
 {
-    public interface ITerminal
+    public interface IUser
     {
-        TerminalNumber Number { get; }
+        string FullName { get; }
     }
 }

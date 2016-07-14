@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PhoneStation
 {
-    public interface ITerminal
+    public interface IRequest
     {
-        TerminalNumber Number { get; }
+        TerminalNumber Source { get; }
     }
 }

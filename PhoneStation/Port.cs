@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneStation
 {
-    class Port
+    public class Port : IPort
     {
         public PortCondition ConditionFlags { get; private set; }
 

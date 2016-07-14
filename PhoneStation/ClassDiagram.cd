@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="PhoneStation.Port">
-    <Position X="0.5" Y="0.75" Width="1.5" />
+    <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAAQ=</HashCode>
       <FileName>Port.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="PhoneStation.Station">
     <Position X="2.25" Y="0.75" Width="1.5" />
@@ -15,7 +16,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PhoneStation.Terminal">
-    <Position X="4" Y="0.75" Width="1.5" />
+    <Position X="4" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAEAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Terminal.cs</FileName>
@@ -29,6 +30,14 @@
       <FileName>CallInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="PhoneStation.CallRequest">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Requests\CallRequest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Struct Name="PhoneStation.TerminalNumber">
     <Position X="9.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
@@ -37,10 +46,24 @@
     </TypeIdentifier>
   </Struct>
   <Interface Name="PhoneStation.ITerminal">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="4" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ITerminal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PhoneStation.IRequest">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Requests\IRequest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PhoneStation.IPort" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPort.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="PhoneStation.PortCondition">
@@ -48,13 +71,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAQAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PortCondition.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="PhoneStation.RequestType">
-    <Position X="5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RequestType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Calibri" Size="10" />

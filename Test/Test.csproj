@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2AAC2D6D-8BD9-4FBB-B727-42050DA7D772}</ProjectGuid>
+    <ProjectGuid>{50D2158C-18BC-4C91-B97E-CE74DE7ABB95}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PhoneStation</RootNamespace>
-    <AssemblyName>PhoneStation</AssemblyName>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,23 +52,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CallInfo.cs" />
-    <Compile Include="IPort.cs" />
-    <Compile Include="Requests\IRequest.cs" />
-    <Compile Include="ITerminal.cs" />
-    <Compile Include="Port.cs" />
-    <Compile Include="PortCondition.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requests\CallRequest.cs" />
-    <Compile Include="Station.cs" />
-    <Compile Include="Terminal.cs" />
-    <Compile Include="TerminalNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.csproj">
+      <Project>{ca6271ed-22d1-4cc8-a6fc-b06b520b3c9c}</Project>
+      <Name>ConsoleApplication1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BillingSystem\BillingSystem.csproj">
+      <Project>{b30b207b-3675-4a7d-bc43-6b75a7f77d68}</Project>
+      <Name>BillingSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Billing\BillingDAL.csproj">
+      <Project>{477f93c0-77f3-4683-a351-a05d2c548497}</Project>
+      <Name>BillingDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhoneStation\PhoneStation.csproj">
+      <Project>{2aac2d6d-8bd9-4fbb-b727-42050da7d772}</Project>
+      <Name>PhoneStation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

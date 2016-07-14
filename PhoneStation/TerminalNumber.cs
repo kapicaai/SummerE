@@ -7,6 +7,10 @@ namespace PhoneStation
 {
     public struct TerminalNumber
     {
-        long Number { get; set; }
+        long Number { get; }
+        public TerminalNumber(long number)
+        {
+            Number = number;
+        }
     }
 }
