@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="62bbe77f7c784a7491a2591c2966beb1" Name="Diagram1" >
+        <EntityTypeShape EntityType="BillingDataModel.Client" Width="1.5" PointX="1.5" PointY="0.5" />
+        <EntityTypeShape EntityType="BillingDataModel.Terminal" Width="1.5" PointX="7.75" PointY="0.5" />
+        <EntityTypeShape EntityType="BillingDataModel.CallInfo" Width="1.5" PointX="7.75" PointY="3.25" />
+        <EntityTypeShape EntityType="BillingDataModel.Contract" Width="1.5" PointX="4.5" PointY="0.5" />
+        <AssociationConnector Association="BillingDataModel.ContractClient" />
+        <AssociationConnector Association="BillingDataModel.ContractTerminal" />
+        <EntityTypeShape EntityType="BillingDataModel.ContractBillingPlanBinding" Width="1.5" PointX="4.5" PointY="4.25" />
+        <AssociationConnector Association="BillingDataModel.TerminalCallInfo" />
+        <EntityTypeShape EntityType="BillingDataModel.BillingPlan" Width="1.5" PointX="1.25" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="BillingDataModel.BillingPlanContractBillingPlanBinding" />
+        <AssociationConnector Association="BillingDataModel.ContractContractBillingPlanBinding" />
+        <EntityTypeShape EntityType="BillingDataModel.BillingInfoSet" Width="1.5" PointX="3" PointY="13.125" />
+        <EntityTypeShape EntityType="BillingDataModel.BillingPlanSet" Width="1.5" PointX="3" PointY="15.875" />
+        <EntityTypeShape EntityType="BillingDataModel.ClientSet" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BillingDataModel.ContractBillingPlanBindingSet" Width="1.5" PointX="5.25" PointY="9.5" />
+        <EntityTypeShape EntityType="BillingDataModel.ContractSet" Width="1.5" PointX="3" PointY="9.25" />
+        <EntityTypeShape EntityType="BillingDataModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BillingDataModel.TerminalSet" Width="1.5" PointX="0.75" PointY="9.625" />
+        <AssociationConnector Association="BillingDataModel.FK_TerminalBillingInfo" />
+        <AssociationConnector Association="BillingDataModel.FK_BillingPlanContractBillingPlanBinding" />
+        <AssociationConnector Association="BillingDataModel.FK_ClientContract" />
+        <AssociationConnector Association="BillingDataModel.FK_ContractContractBillingPlanBinding" />
+        <AssociationConnector Association="BillingDataModel.FK_TerminalContract" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

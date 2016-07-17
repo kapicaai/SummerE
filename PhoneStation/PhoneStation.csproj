@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="CallInfo.cs" />
     <Compile Include="IPort.cs" />
+    <Compile Include="Requests\DisconnectRequest.cs" />
     <Compile Include="Requests\IRequest.cs" />
     <Compile Include="ITerminal.cs" />
     <Compile Include="Port.cs" />

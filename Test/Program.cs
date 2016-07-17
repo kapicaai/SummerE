@@ -12,7 +12,7 @@ namespace Test
         static void Main(string[] args)
         {
             BillingHandler handler = new BillingHandler();
-            handler.Add(new Client("fjfjjfjfjf"));
+            handler.Add(new Client("Cat Cat"));
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneStation
 {
-    class CallRequest : IRequest
+    public class CallRequest : IRequest
     {
         public TerminalNumber Source { get; }
         public TerminalNumber Target { get; }

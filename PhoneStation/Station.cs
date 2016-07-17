@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneStation
 {
-    class Station
+    public class Station
     {
         public IDictionary<IPort, ITerminal> PortTerminalMapping { get; private set; }
         public ICollection<IPort> Ports { get; private set; }

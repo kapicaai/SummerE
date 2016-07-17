@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneStation
 {
-    class Terminal : ITerminal
+    public class Terminal : ITerminal
     {
         public TerminalNumber Number { get; }
 

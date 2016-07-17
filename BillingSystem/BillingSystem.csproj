@@ -43,13 +43,14 @@
     <Compile Include="BillingHandler.cs" />
     <Compile Include="IBillingPlan.cs" />
     <Compile Include="IContract.cs" />
+    <Compile Include="ICostCalculator.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.csproj">
-      <Project>{ca6271ed-22d1-4cc8-a6fc-b06b520b3c9c}</Project>
-      <Name>ConsoleApplication1</Name>
+    <ProjectReference Include="..\BilliingDB\BilliingDB.csproj">
+      <Project>{38687475-368d-46c4-b3dd-dd13cd1bd7eb}</Project>
+      <Name>BilliingDB</Name>
     </ProjectReference>
     <ProjectReference Include="..\Billing\BillingDAL.csproj">
       <Project>{477f93c0-77f3-4683-a351-a05d2c548497}</Project>

@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50D2158C-18BC-4C91-B97E-CE74DE7ABB95}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{38687475-368D-46C4-B3DD-DD13CD1BD7EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test</RootNamespace>
-    <AssemblyName>Test</AssemblyName>
+    <RootNamespace>BilliingDB</RootNamespace>
+    <AssemblyName>BilliingDB</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -44,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,31 +51,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BillingDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillingDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BillingDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BillingDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillingDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BillingInfo.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BillingPlan.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contract.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractBillingPlanBindingSet.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal.cs">
+      <DependentUpon>BillingDBModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <EntityDeploy Include="BillingDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BillingDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="BillingDBModel.edmx.diagram">
+      <DependentUpon>BillingDBModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BilliingDB\BilliingDB.csproj">
-      <Project>{38687475-368d-46c4-b3dd-dd13cd1bd7eb}</Project>
-      <Name>BilliingDB</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BillingSystem\BillingSystem.csproj">
-      <Project>{b30b207b-3675-4a7d-bc43-6b75a7f77d68}</Project>
-      <Name>BillingSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Billing\BillingDAL.csproj">
-      <Project>{477f93c0-77f3-4683-a351-a05d2c548497}</Project>
-      <Name>BillingDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PhoneStation\PhoneStation.csproj">
-      <Project>{2aac2d6d-8bd9-4fbb-b727-42050da7d772}</Project>
-      <Name>PhoneStation</Name>
-    </ProjectReference>
+    <Content Include="BillingDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BillingDBModel.edmx</DependentUpon>
+      <LastGenOutput>BillingDBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BillingDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BillingDBModel.edmx</DependentUpon>
+      <LastGenOutput>BillingDBModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
